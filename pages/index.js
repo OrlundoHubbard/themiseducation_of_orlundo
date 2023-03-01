@@ -38,12 +38,11 @@ export default function Home({ posts }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-       <div>
-        <p>Yo!</p>
+       <div className="p-10">
         {posts.map((post) => {
           return (
-            <div>
-              <h1>{post.frontMatter.title}</h1>
+            <div className="mb-4">
+              <h1 className="text-xl py-3">{post.frontMatter.title}</h1>
               <p>{post.frontMatter.metaDesc}</p>
             </div>
           )
