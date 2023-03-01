@@ -1,7 +1,7 @@
 ---
-title: 'Lorem Ipsum'
+title: 'Learn how to build a markdown blog'
 metaTitle: 'Learn jhow to buil a blog'
-metaDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis pharetra lorem, et congue lacus. In id dictum lectus. Sed ac volutpat nisl. Suspendisse lobortis imperdiet ullamcorper.'
+metaDesc: 'Sed ultricies lectus mauris, vel lobortis augue auctor in. Vivamus ipsum justo, molestie quis nulla non, blandit auctor felis. Mauris nec diam erat. '
 socialImage: image/how-to-convert-canva-to-google-slide.jpeg
 date: '2022-04-27'
 tags: 

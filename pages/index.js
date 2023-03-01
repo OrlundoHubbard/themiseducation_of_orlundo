@@ -2,10 +2,33 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
+import fs from "fs"
+import matter from 'gray-matter'
+
+export async function getStaticProps() {
+  // get the post
+  const files = fs.readdirSync("posts");
+  const posts = files.map((filename) => {
+    const slug = filename.replace(".md", "");
+    const readFiles = fs.readFileSync(`posts/${filename}`);
+    const {data: frontMatter} = matter(readFiles);
+
+    return {
+      slug,
+      frontMatter,
+    };
+  });
+
+  return {
+    props: {
+      posts,
+    }
+  }
+}
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+export default function Home({ posts }) {
   return (
     <>
       <Head>
@@ -17,6 +40,14 @@ export default function Home() {
       <main>
        <div>
         <p>Yo!</p>
+        {posts.map((post) => {
+          return (
+            <div>
+              <h1>{post.frontMatter.title}</h1>
+              <p>{post.frontMatter.metaDesc}</p>
+            </div>
+          )
+        })}
        </div>
       </main>
     </>
