@@ -4,6 +4,7 @@ import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 import fs from "fs"
 import matter from 'gray-matter'
+import Link from 'next/link'
 
 export async function getStaticProps() {
   // get the post
@@ -41,10 +42,13 @@ export default function Home({ posts }) {
        <div className="p-10">
         {posts.map((post) => {
           return (
+            <Link key={`${post.slug}`} href={`/blog/${post.slug}`}>
             <div className="mb-4">
+              <img src={`${post.frontMatter.socialImage}`} />
               <h1 className="text-xl py-3">{post.frontMatter.title}</h1>
               <p>{post.frontMatter.metaDesc}</p>
             </div>
+            </Link>
           )
         })}
        </div>
