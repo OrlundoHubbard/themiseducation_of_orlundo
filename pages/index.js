@@ -39,13 +39,14 @@ export default function Home({ posts }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
+        <h1 className="py-3 ml-10 font-sans text-xl">The miseducation of Orlundo</h1>
        <div className="p-10">
         {posts.map((post) => {
           return (
             <Link key={`${post.slug}`} href={`/blog/${post.slug}`}>
             <div className="mb-4">
-              <img src={`${post.frontMatter.socialImage}`} />
-              <h1 className="text-xl py-3">{post.frontMatter.title}</h1>
+              {/* <img src={`${post.frontMatter.socialImage}`} /> */}
+              <h1 className="text-xl py-3 font-sans">{post.frontMatter.title}</h1>
               <p>{post.frontMatter.metaDesc}</p>
             </div>
             </Link>

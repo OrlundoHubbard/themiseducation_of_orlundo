@@ -1,9 +1,9 @@
 ---
-title: 'Lorem Ipsum'
-metaTitle: 'Learn how to buil a blog'
-metaDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis pharetra lorem, et congue lacus. In id dictum lectus. Sed ac volutpat nisl. Suspendisse lobortis imperdiet ullamcorper.'
+title: 'My one big idea'
+metaTitle: 'The one idea that I believe in the most'
+metaDesc: "I love David Perell's writing. He talks a lot about having one big idea and pursuing that idea hard. This is what that article discusses."
 socialImage: image/how-to-convert-canva-to-google-slide.jpeg
-date: '2022-04-27'
+date: '2023-03-02'
 tags: 
     - 'blog'
     - 'markdown'
